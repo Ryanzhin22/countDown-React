@@ -1,0 +1,20 @@
+.formulario{
+    min-width: 50%;
+    min-height: 500px;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.formulario form{
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario form input{
+    margin: 10px 0px;
+    padding: 5px;
+}

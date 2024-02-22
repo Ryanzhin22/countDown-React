@@ -1,7 +1,8 @@
-import Title from './components/Title'
-import Count from './components/Count'
 import BgImg from './assets/bg-img.jpg'
 import useCounter from './hooks/useCounter'
+import Contador from './pages/Contador'
+import Formulario from './pages/Formulario';
+import { BrowserRouter , Routes, Route, Form } from "react-router-dom";
 
 import './App.css'
 
@@ -11,15 +12,12 @@ function App() {
 
   return (
     <div className='App' style={{ backgroundImage: `url(${BgImg})` }}>
-        <div className="container">
-          <Title title="Contagem regressiva para ano novo"/>
-          <div className="countDown-container">
-            <Count title="Dias" number={day}/>
-            <Count title="Horas" number={hour}/>
-            <Count title="Minutos" number={minute}/>
-            <Count title="Segundos" number={second}/>
-          </div>
-        </div>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/counter" element={<Contador day={day} hour={hour} minute={minute} second={second}/>}/>
+            <Route path='/' element={<Formulario/>}/>
+          </Routes>
+        </BrowserRouter>
     </div>
   )
 }

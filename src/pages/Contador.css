@@ -1,0 +1,19 @@
+
+.container{
+    min-width: 50%;
+    min-height: 500px;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.countDown-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    gap: 2rem;
+}
